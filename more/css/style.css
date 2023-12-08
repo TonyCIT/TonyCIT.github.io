@@ -21,58 +21,57 @@
    * colors
    */
 
-  /* gradient */
+  /* gradient */ portfolio
 
+:root {
+  /* Updated gradient colors */
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(0, 0%, 75%) 3%,  /* Light Gray */
-    hsl(267, 39%, 20%) 97% /* Dark Purple */
+    hsl(221, 44%, 88%) 3%,  /* Light Steel Blue */
+    hsl(294, 44%, 81%) 97% /* Pastel Purple */
   );
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
-    hsla(0, 0%, 75%, 0.251) 0%, /* Lighter Gray */
-    hsla(267, 39%, 20%, 0) 100%   /* Darker Purple */
-  ), hsl(267, 39%, 20%);
+    hsla(221, 44%, 88%, 0.251) 0%, /* Lighter Steel Blue */
+    hsla(294, 44%, 81%, 0) 100%   /* Lighter Pastel Purple */
+  ), hsl(294, 44%, 81%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    hsl(0, 0%, 75%) 0%,   /* Light Gray */
-    hsla(267, 39%, 20%, 0) 50% /* Dark Purple */
+    hsl(221, 44%, 88%) 0%,   /* Light Steel Blue */
+    hsla(294, 44%, 81%, 0) 50% /* Pastel Purple */
   );
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
-    hsla(0, 0%, 75%, 0.251) 0%, /* Lighter Gray */
-    hsla(267, 39%, 20%, 0) 59.86% /* Darker Purple */
-  ), hsl(267, 39%, 20%);
+    hsla(221, 44%, 88%, 0.251) 0%, /* Lighter Steel Blue */
+    hsla(294, 44%, 81%, 0) 59.86% /* Lighter Pastel Purple */
+  ), hsl(294, 44%, 81%);
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(0, 0%, 75%) 0%,   /* Light Gray */
-    hsla(267, 39%, 20%, 0) 50% /* Dark Purple */
+    hsl(221, 44%, 88%) 0%,   /* Light Steel Blue */
+    hsla(294, 44%, 81%, 0) 50% /* Pastel Purple */
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
-    hsl(0, 0%, 75%),     /* Light Gray */
-    hsl(267, 39%, 20%)     /* Dark Purple */
+    hsl(221, 44%, 88%),     /* Light Steel Blue */
+    hsl(294, 44%, 81%)     /* Pastel Purple */
   );
 
-  /* solid */
+  /* Updated solid colors */
+  --dark-grey: hsl(221, 44%, 30%); /* Darker Steel Blue */
+  --jet: hsl(294, 44%, 40%); /* Darker Pastel Purple */
+  --onyx: hsl(221, 44%, 88%); /* Light Steel Blue */
+  --eerie-black-1: hsl(294, 44%, 81%); /* Pastel Purple */
+  --eerie-black-2: hsl(294, 44%, 76%); /* Darker Pastel Purple */
+  --smoky-black: hsl(294, 44%, 70%); /* Deepest Pastel Purple */
+  --white-1: hsl(221, 44%, 95%); /* Very Light Steel Blue */
+  --white-2: hsl(221, 44%, 92%); /* Lighter Steel Blue */
+  --orange-yellow-crayola: hsl(221, 44%, 90%); /* Muted Steel Blue */
+  --vegas-gold: hsl(221, 44%, 75%); /* Medium Steel Blue */
+  --light-gray: hsl(221, 44%, 98%); /* Lightest Steel Blue */
+  --light-gray-70: hsla(221, 44%, 98%, 0.7); /* Translucent Steel Blue */
+  --bittersweet-shimmer: hsl(294, 50%, 65%); /* Muted Pastel Purple */
+}
 
-
-  /* Other color definitions */
-  --dark-grey: hsl(0, 0%, 20%); /* Dark grey color */
-
-
-  --jet: hsl(267, 39%, 22%); /* Dark Purple */
-  --onyx: hsl(0, 0%, 75%); /* Light Gray */
-  --eerie-black-1: hsl(267, 39%, 20%); /* Dark Purple */
-  --eerie-black-2: hsl(267, 39%, 18%); /* Darker Purple */
-  --smoky-black: hsl(267, 39%, 15%); /* Deepest Purple */
-  --white-1: hsl(0, 0%, 85%); /* Very Light Gray */
-  --white-2: hsl(0, 0%, 80%); /* Lighter Gray */
-  --orange-yellow-crayola: hsl(0, 0%, 72%); /* Muted Gray */
-  --vegas-gold: hsl(0, 0%, 58%); /* Medium Gray */
-  --light-gray: hsl(0, 0%, 90%); /* Lightest Gray */
-  --light-gray-70: hsla(0, 0%, 90%, 0.7); /* Translucent Gray */
-  --bittersweet-shimmer: hsl(267, 43%, 51%); /* Muted Purple */
 
   /**
    * typography
@@ -464,13 +463,18 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: linear-gradient(
+    to right, 
+    hsl(221, 44%, 88%), /* Light Steel Blue */
+    hsl(294, 44%, 81%) /* Pastel Purple */
+  );
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
   box-shadow: var(--shadow-2);
   z-index: 5;
 }
+
 
 .navbar-list {
   display: flex;
@@ -503,9 +507,9 @@ main {
 .about .article-title { margin-bottom: 15px; }
 
 .about-text {
-  color: var(--light-gray);
+  color: #333333; /* Darker shade for more contrast */
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-500); /* Increased weight for emphasis */
   line-height: 1.6;
 }
 
@@ -860,14 +864,14 @@ main {
 }
 
 .skill-progress-bg {
-  background: var(--jet);
+  background: #cccccc;
   width: 100%;
   height: 8px;
   border-radius: 10px;
 }
 
 .skill-progress-fill {
-  background: var(--text-gradient-yellow);
+  background: #666666;
   height: 100%;
   border-radius: inherit;
 }
@@ -879,6 +883,49 @@ main {
 /*-----------------------------------*\
   #PORTFOLIO
 \*-----------------------------------*/
+
+/* Add to your existing CSS */
+.modal { 
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Show the modal when a link with class 'modal-open' is clicked */
+.modal-open:target {
+    display: block;
+}
+
+
+
+
+
+
 
 .filter-list { display: none; }
 
@@ -963,7 +1010,7 @@ main {
   width: 100%;
   height: 200px;
   border-radius: 16px;
-  overflow: hidden;
+  overflow: visible;
   margin-bottom: 15px;
 }
 
@@ -1012,21 +1059,23 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover img { transform: scale(1.1); }
+.project-item > a:hover img { transform: scale(1.6); 
+							  z-index: 10; /* Ensures the image is above other elements */
+							  position: relative; /* Allows positioning of the image */ }
 
 .project-title,
 .project-category { margin-left: 10px; }
 
 .project-title {
-  color: var(--white-2);
+  color: #a0a0a0; /* Lighter grey for the title */
   font-size: var(--fs-5);
   font-weight: var(--fw-400);
   text-transform: capitalize;
-  line-height: 1.3;
+  line-height: 1.6;
 }
 
 .project-category {
-  color: var(--light-gray-70);
+  color: #000000; /* Solid black for the category */
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
@@ -1035,19 +1084,21 @@ main {
 
 
 
+
+
 /*-----------------------------------*\
-  #BLOG
+  #social
 \*-----------------------------------*/
 
-.blog-posts { margin-bottom: 10px; }
+.social-posts { margin-bottom: 10px; }
 
-.blog-posts-list {
+.social-posts-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
 
-.blog-post-item > a {
+.social-post-item > a {
   position: relative;
   background: var(--border-gradient-onyx);
   height: 100%;
@@ -1056,34 +1107,38 @@ main {
   z-index: 1;
 }
 
-.blog-post-item > a::before {
+.social-post-item > a::before {
   content: "";
-  position: absolute;
+  position: relative;
   inset: 1px;
   border-radius: inherit;
   background: var(--eerie-black-1);
   z-index: -1;
 }
 
-.blog-banner-box {
+.social-banner-box {
   width: 100%;
   height: 200px;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: visible;
 }
 
-.blog-banner-box img {
+.social-banner-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  
   transition: var(--transition-1);
 }
 
-.blog-post-item > a:hover .blog-banner-box img { transform: scale(1.1); }
+.social-post-item > a:hover .social-banner-box img { transform: scale(1.2);
+													 z-index: 10;
+													 position: relative;
+													 filter: none;}
 
-.blog-content { padding: 15px; }
+.social-content { padding: 15px; }
 
-.blog-meta {
+.social-meta {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1091,29 +1146,32 @@ main {
   margin-bottom: 10px;
 }
 
-.blog-meta :is(.blog-category, time) {
-  color: var(--light-gray-70);
+.social-meta :is(.social-category, time) {
+  color: color: #000;
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
 
-.blog-meta .dot {
+.social-meta .dot {
   background: var(--light-gray-70);
   width: 4px;
   height: 4px;
   border-radius: 4px;
 }
 
-.blog-item-title {
+.social-item-title {
+  color: #333;
   margin-bottom: 10px;
   line-height: 1.3;
   transition: var(--transition-1);
 }
 
-.blog-post-item > a:hover .blog-item-title { color: var(--orange-yellow-crayola); }
+.social-post-item > a:hover .social-item-title { color: red; z-index: 10;
+													 position: relative;
+													 filter: none; }
 
-.blog-text {
-  color: var(--light-gray);
+.social-text {
+  color: #000;
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
@@ -1158,11 +1216,15 @@ main {
 }
 
 .form-input {
-  color: var(--white-2);
+  background: #f0f0f0; /* Light grey background for input fields */
+  color: #333; /* Darker text color for contrast */
+  border: 1px solid #ccc; /* Light grey border */
+	
+  
   font-size: var(--fs-6);
   font-weight: var(--fw-400);
   padding: 13px 20px;
-  border: 1px solid var(--jet);
+ 
   border-radius: 14px;
   outline: none;
 }
@@ -1177,6 +1239,7 @@ textarea.form-input {
   max-height: 200px;
   resize: vertical;
   margin-bottom: 25px;
+  
 }
 
 textarea.form-input::-webkit-resizer { display: none; }
@@ -1249,11 +1312,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * #PORTFOLIO, BLOG 
+   * #PORTFOLIO, social 
    */
 
   .project-img,
-  .blog-banner-box { height: auto; }
+  .social-banner-box { height: auto; }
 
 }
 
@@ -1446,7 +1509,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* testimonials modal */
 
-  .modal-container { padding: 20px; }
+  .modal-container { padding: 20px; 
+  
+  }
 
   .testimonials-modal {
     display: flex;
@@ -1455,6 +1520,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 25px;
     padding: 30px;
     border-radius: 20px;
+	background-color: #ffffff;
   }
 
   .modal-img-wrapper {
@@ -1508,14 +1574,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * #PORTFOLIO, BLOG
+   * #PORTFOLIO, social
    */
 
-  .project-img, .blog-banner-box { border-radius: 16px; }
+  .project-img, .social-banner-box { border-radius: 16px; }
 
-  .blog-posts-list { gap: 30px; }
+  .social-posts-list { gap: 30px; }
 
-  .blog-content { padding: 25px; }
+  .social-content { padding: 25px; }
 
 
 
@@ -1627,9 +1693,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .filter-item button.active { color: var(--orange-yellow-crayola); }
 
-  /* portfolio and blog grid */
+  /* portfolio and social grid */
 
-  .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
+  .project-list, .social-posts-list { grid-template-columns: 1fr 1fr; }
 
 
 
@@ -1754,10 +1820,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * BLOG
+   * social
    */
 
-  .blog-banner-box { height: 230px; }
+  .social-banner-box { height: 500px; }
 
 }
 
